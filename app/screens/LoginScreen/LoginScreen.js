@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
     View,
     StyleSheet,
+    Alert,
 } from "react-native";
 import globalStyles from "../../Styles/GlobalStyles";
 import EveryLogo from "../../assets/evry-svgrepo-com.svg";
@@ -26,7 +27,17 @@ function LoginScreen(props) {
 
                 <CustomForgotPassword />
 
-                <CustomButton text="Login" btn_type="primary" />
+                <CustomButton
+                    text="Login"
+                    btn_type="primary"
+                    onPress={() =>
+                        Alert.alert(
+                            "Under Development",
+                            "This functionality is not yet implemented.",
+                            [{ text: "Ok" }]
+                        )
+                    }
+                />
 
                 <Text style={{ marginVertical: 15 }}>
                     Or Login With Your Socials

@@ -5,7 +5,7 @@ import globalStyles from "../../Styles/GlobalStyles";
 function CustomButton(props) {
     return (
         <TouchableOpacity
-            onPress={() => console.log("Login")}
+            onPress={props.onPress}
             style={[globalStyles.button, globalStyles[`btn_${props.btn_type}`]]}
         >
             <Text style={globalStyles.text_white}>{props.text}</Text>
