@@ -15,7 +15,7 @@ function CustomInput(props) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "transparent",
         width: "100%",
         borderWidth: 1,
         borderColor: "#777",

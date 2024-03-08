@@ -1,42 +1,49 @@
 import React from "react";
 import {
-    Platform,
     SafeAreaView,
     StatusBar,
-    StyleSheet,
     Text,
     TouchableOpacity,
+    View,
+    StyleSheet,
 } from "react-native";
+import globalStyles from "../../Styles/GlobalStyles";
+import EveryLogo from "../../assets/evry-svgrepo-com.svg";
 import CustomButton from "../../components/CustomButton/CustomButton";
-import CustomInput from "../../components/CustomInput/CustomInput";
 import CustomForgotPassword from "../../components/CustomForgotPassword/CustomForgotPassword";
+import CustomInput from "../../components/CustomInput/CustomInput";
 import FacebookButton from "../../components/SocialsButtons/FacebookButton/FacebookButton";
 import GoogleButton from "../../components/SocialsButtons/GoogleButton/GoogleButton";
-import globalStyles from "../../Styles/GlobalStyles";
 
 function LoginScreen(props) {
     return (
-        <SafeAreaView style={styles.container}>
-            <CustomInput placeholder="Username" />
-            <CustomInput placeholder="Password" secure />
+        <SafeAreaView style={[globalStyles.container, styles.flex_ends]}>
+            <EveryLogo width={100} height={100} style={styles.logo} />
 
-            <CustomForgotPassword />
+            <View style={styles.input_container}>
+                <CustomInput placeholder="Username" />
+                <CustomInput placeholder="Password" secure />
 
-            <CustomButton text="Login" btn_type="primary" />
+                <CustomForgotPassword />
 
-            <Text style={{ marginVertical: 15 }}>
-                Or Login With Your Socials
-            </Text>
+                <CustomButton text="Login" btn_type="primary" />
 
-            <FacebookButton />
-            <GoogleButton />
-
-            <TouchableOpacity onPress={() => console.log("Sign Up pressed")}>
                 <Text style={{ marginVertical: 15 }}>
-                    Don't have an account?
-                    <Text style={globalStyles.text_social}>Sign Up</Text>
+                    Or Login With Your Socials
                 </Text>
-            </TouchableOpacity>
+
+                <FacebookButton />
+                <GoogleButton />
+
+                <TouchableOpacity
+                    onPress={() => console.log("Sign Up pressed")}
+                >
+                    <Text style={{ marginVertical: 15 }}>
+                        Don't have an account?
+                        <Text style={globalStyles.text_social}>Sign Up</Text>
+                    </Text>
+                </TouchableOpacity>
+            </View>
 
             <StatusBar style="auto" />
         </SafeAreaView>
@@ -44,12 +51,20 @@ function LoginScreen(props) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#f0f0f0",
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    input_container: {
+        width: "100%",
+        padding: 15,
+        backgroundColor: "white",
+        borderRadius: 5,
+        marginVertical: 5,
         alignItems: "center",
-        padding: 20,
+    },
+    flex_ends: {
+        // justifyContent: "space-between",
+    },
+    logo: {
+        marginTop: 10,
+        marginBottom: 40,
     },
 });
 

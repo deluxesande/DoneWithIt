@@ -1,6 +1,15 @@
 import { StyleSheet } from "react-native";
+import { Platform, StatusBar } from "react-native";
 
 const globalStyles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#f0f0f0",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        alignItems: "center",
+        padding: 20,
+        width: "100%",
+    },
     button: {
         backgroundColor: "#007AE1",
         width: "100%",
