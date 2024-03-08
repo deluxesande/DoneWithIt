@@ -1,27 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
+import globalStyles from "../../Styles/GlobalStyles";
 
 function CustomButton(props) {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>{props.text}</Text>
-        </View>
+        <TouchableOpacity
+            onPress={() => console.log("Login")}
+            style={[globalStyles.button, globalStyles[`btn_${props.btn_type}`]]}
+        >
+            <Text style={globalStyles.text_white}>{props.text}</Text>
+        </TouchableOpacity>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#3B71F3",
-        width: "100%",
-        padding: 15,
-        marginVertical: 5,
-        alignItems: "center",
-        borderRadius: 5,
-    },
-    text: {
-        fontWeight: "bold",
-        color: "white",
-    },
-});
 
 export default CustomButton;
