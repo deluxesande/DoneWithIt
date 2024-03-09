@@ -43,11 +43,33 @@ function LoginScreen(props) {
                     Or Login With Your Socials
                 </Text>
 
-                <FacebookButton />
-                <GoogleButton />
+                <FacebookButton
+                    onPress={() =>
+                        Alert.alert(
+                            "Under Development",
+                            "This functionality is not yet implemented.",
+                            [{ text: "Ok" }]
+                        )
+                    }
+                />
+                <GoogleButton
+                    onPress={() =>
+                        Alert.alert(
+                            "Under Development",
+                            "This functionality is not yet implemented.",
+                            [{ text: "Ok" }]
+                        )
+                    }
+                />
 
                 <TouchableOpacity
-                    onPress={() => console.log("Sign Up pressed")}
+                    onPress={() =>
+                        Alert.alert(
+                            "Under Development",
+                            "This functionality is not yet implemented.",
+                            [{ text: "Ok" }]
+                        )
+                    }
                 >
                     <Text style={{ marginVertical: 15 }}>
                         Don't have an account?
