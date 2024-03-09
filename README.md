@@ -43,7 +43,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
--   **Deluxe Sande** - _Initial work_ - [YourName](https://github.com/deluxesande)
+-   **Deluxe Sande** - _Initial work_ - [deluxesande](https://github.com/deluxesande)
 
 See also the list of [contributors](https://github.com/deluxesande/DoneWithIt/contributors) who participated in this project.
 
